@@ -9,7 +9,7 @@ on: [push, workflow_dispatch]
 
 
 jobs:
-  check-bats-version:
+  Dev:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
