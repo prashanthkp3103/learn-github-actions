@@ -16,5 +16,33 @@ jobs:
 #      - uses: actions/setup-node@v4
 #        with:
 #          node-version: '20'
-      - run: echo Hello GithubActions
+      - run: echo Hello Dev
+
+
+  QA:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      #      - uses: actions/setup-node@v4
+      #        with:
+      #          node-version: '20'
+      - run: echo Hello QA
+
+  UAT:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      #      - uses: actions/setup-node@v4
+      #        with:
+      #          node-version: '20'
+      - run: echo Hello QA
+
+  PROD:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      #      - uses: actions/setup-node@v4
+      #        with:
+      #          node-version: '20'
+      - run: echo Hello QA
 
