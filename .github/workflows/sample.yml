@@ -11,9 +11,9 @@ on: [push, workflow_dispatch]
 jobs:
   Dev:
     #runs-on: ubuntu-latest
-    #runs-on: self-hosted
-    runs-on:
-      group: Default
+    runs-on: self-hosted
+#    runs-on:
+#      group: Default
     steps:
       - uses: actions/checkout@v4
 #      - uses: actions/setup-node@v4
