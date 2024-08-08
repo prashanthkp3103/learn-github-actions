@@ -10,7 +10,8 @@ on: [push, workflow_dispatch]
 
 jobs:
   Dev:
-    runs-on: ubuntu-latest
+    #runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
 #      - uses: actions/setup-node@v4
@@ -20,7 +21,7 @@ jobs:
 
 
   QA:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: Dev
     steps:
       - uses: actions/checkout@v4
@@ -30,7 +31,7 @@ jobs:
       - run: echo Hello QA
 
   UAT:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: QA
     steps:
       - uses: actions/checkout@v4
