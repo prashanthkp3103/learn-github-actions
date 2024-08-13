@@ -1,0 +1,17 @@
+name: grab vault secrets
+on: [workflow_dispatch]
+jobs:
+  Dev:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Import Secrets
+        id: import-secrets
+        uses: hashicorp/vault-action@v2
+        with:
+          url: https://vault.meppk.xyz:8200
+          token: ${{ secrets.VAULT_TOKEN }}
+          tlsSkipVerify: true
+          secrets: |
+              secret/data/test/MYPASS | MYPASS ;
+      - run: env # setting env to see the secrets
+
